@@ -27,6 +27,10 @@ dependencies:
 
   english_words: ^4.0.0
   provider: ^6.0.0
+  firebase_core: ^2.6.0
+  auth: ^8.2.0+02
+  analytics: ^1.0.2
+  cloud_firestore: ^4.4.1
 
 dev_dependencies:
   flutter_test:
