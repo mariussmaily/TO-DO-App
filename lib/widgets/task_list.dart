@@ -25,11 +25,34 @@ class TaskList extends StatelessWidget {
           trailing: IconButton(
             icon: Icon(Icons.delete),
             onPressed: () {
-              removeTask(index);
+              eliminar(context, index);
             },
           ),
         );
       },
+    );
+  }
+
+  void eliminar(BuildContext context, index) {
+    showDialog<String>(
+      context: context,
+      builder: (BuildContext context) => AlertDialog(
+        title: const Text('¿Estás seguro?'),
+        content: const Text('Estas seguro de que quieres borrar esta tarea: '),
+        actions: <Widget>[
+          TextButton(
+            onPressed: () {
+              removeTask(index);
+              Navigator.pop(context, 'Eliminar');
+            },
+            child: const Text('Eliminar'),
+          ),
+          TextButton(
+            onPressed: () => Navigator.pop(context, 'Cancelar'),
+            child: const Text('Cancelar'),
+          ),
+        ],
+      ),
     );
   }
 }
