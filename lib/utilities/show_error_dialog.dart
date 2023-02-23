@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+//Al definir la función como un Future<void>, se garantiza que el resto del código no se ejecutará
+//hasta que el usuario haya interactuado con el diálogo y la acción del usuario se haya resuelto.
 Future<void> showErrorDialog(
   BuildContext context,
   String text,
