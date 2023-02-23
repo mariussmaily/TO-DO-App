@@ -32,7 +32,7 @@ class _TaskInputState extends State<TaskInput> {
             child: TextField(
               controller: _controller,
               decoration: InputDecoration(
-                hintText: 'Escribe una tarea',
+                hintText: 'Write a task',
               ),
               //este onSubmitted es la funccion del boton enviar del teclado del movil.
               //Lo mismo que el boton ElevatedButton de abajo.
@@ -42,7 +42,7 @@ class _TaskInputState extends State<TaskInput> {
           SizedBox(width: 16.0),
           ElevatedButton(
             onPressed: _submit,
-            child: Text('Agregar'),
+            child: Text('Add'),
           ),
         ],
       ),
